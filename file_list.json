@@ -5,6 +5,8 @@
   ],
   "dacimages": [
     "help.txt",
+    "busybox.tar",
+    "dacm.tar",
     "testapp_dunfell.tar.gz"
   ]
 }
