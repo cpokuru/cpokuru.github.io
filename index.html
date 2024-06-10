@@ -17,8 +17,26 @@
             padding: 20px;
             text-align: center;
         }
-        main {
+        .container-link {
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .files-container {
+            background-color: #FFF;
+            border: 2px solid #FF6347;
             padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
         footer {
             background-color: #FF6347;
@@ -32,22 +50,19 @@
         footer p {
             margin: 0;
         }
-        .container-link {
-            color: #FF6347;
-            text-decoration: none;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to cpokuru GitHub Page</h1>
     </header>
-    <main>
+    <div class="container">
         <p>Visit my <a class="container-link" href="https://drive.google.com/uc?export=download&id=1XHy8Xuxl38KB1ZC619Qe78FOACGE8Y4g">container</a> page.</p>
-        <p>Available files in the server</p>
+    </div>
+    <div class="files-container">
+        <h2>Available files in the server</h2>
         <ul id="file-list"></ul>
-    </main>
+    </div>
     <footer>
         <p>Created by chandrakanth pokuru</p>
     </footer>
