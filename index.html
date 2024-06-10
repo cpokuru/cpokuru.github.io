@@ -57,11 +57,15 @@
         <h1>Welcome to cpokuru GitHub Page</h1>
     </header>
     <div class="container">
-        <p>Visit this page and click here to download X86 rootfs and LXC container images <a class="container-link" href="https://drive.google.com/uc?export=download&id=1XHy8Xuxl38KB1ZC619Qe78FOACGE8Y4g">container</a> page.</p>
+        <p>Visit my <a class="container-link" href="https://drive.google.com/uc?export=download&id=1XHy8Xuxl38KB1ZC619Qe78FOACGE8Y4g">container</a> page.</p>
     </div>
     <div class="files-container">
-        <h2>Documentation files available in the server</h2>
+        <h2>Available files in the server</h2>
         <ul id="file-list"></ul>
+    </div>
+    <div class="files-container">
+        <h2>Available files in dacimages folder</h2>
+        <ul id="dac-images-list"></ul>
     </div>
     <footer>
         <p>Created by chandrakanth pokuru</p>
@@ -71,13 +75,23 @@
             .then(response => response.json())
             .then(data => {
                 const fileList = document.getElementById('file-list');
-                data.files.forEach(file => {
+                data.docs.forEach(file => {
                     const listItem = document.createElement('li');
                     const anchor = document.createElement('a');
                     anchor.href = '/docs/' + file;
                     anchor.textContent = file;
                     listItem.appendChild(anchor);
                     fileList.appendChild(listItem);
+                });
+
+                const dacImagesList = document.getElementById('dac-images-list');
+                data.dacimages.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const anchor = document.createElement('a');
+                    anchor.href = '/dacimages/' + file;
+                    anchor.textContent = file;
+                    listItem.appendChild(anchor);
+                    dacImagesList.appendChild(listItem);
                 });
             })
             .catch(error => console.error('Error fetching file list:', error));
