@@ -7,6 +7,35 @@
     <style>
         body {
             background-color: #FFA07A; /* Set the background color to a light gray */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font for better readability */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        header {
+            background-color: #FF6347; /* Set header background color to a shade of red */
+            color: white; /* Set text color to white */
+            padding: 20px; /* Add padding for better spacing */
+            text-align: center; /* Center align text */
+        }
+        main {
+            padding: 20px; /* Add padding to main content */
+        }
+        footer {
+            background-color: #FF6347; /* Set footer background color to the same shade of red */
+            color: white; /* Set text color to white */
+            padding: 10px 20px; /* Add padding for better spacing */
+            text-align: center; /* Center align text */
+            position: fixed; /* Fix footer to the bottom */
+            width: 100%; /* Set width to 100% */
+            bottom: 0; /* Align to the bottom */
+        }
+        footer p {
+            margin: 0; /* Remove default margin for paragraph */
+        }
+        .container-link {
+            color: #FF6347; /* Set link color to the same shade of red */
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold; /* Make link text bold */
         }
     </style>
 </head>
@@ -15,7 +44,8 @@
         <h1>Welcome to cpokuru's GitHub Page</h1>
     </header>
     <main>
-        <p>Visit my <a href="https://drive.google.com/uc?export=download&id=1XHy8Xuxl38KB1ZC619Qe78FOACGE8Y4g">container</a> page.</p>
+        <p>Visit my <a class="container-link" href="https://drive.google.com/uc?export=download&id=1XHy8Xuxl38KB1ZC619Qe78FOACGE8Y4g">container</a> page.</p>
+        <p>You can also download some files from my <a class="container-link" href="docs/">files folder</a>.</p>
     </main>
     <footer>
         <p>Created by chandrakanth pokuru</p>
