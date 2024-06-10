@@ -52,8 +52,7 @@
         <p>Created by chandrakanth pokuru</p>
     </footer>
     <script>
-        // JavaScript to dynamically generate file list
-        fetch('/list_files.php') // Assuming you have a PHP script to list files
+        fetch('/file_list.json')
             .then(response => response.json())
             .then(data => {
                 const fileList = document.getElementById('file-list');
