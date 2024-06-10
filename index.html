@@ -53,18 +53,15 @@
     </footer>
     <script>
         // JavaScript to dynamically generate file list
-        fetch('/docs/')
-            .then(response => response.text())
-            .then(text => {
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(text, 'text/html');
-                const links = htmlDoc.querySelectorAll('a');
+        fetch('/list_files.php') // Assuming you have a PHP script to list files
+            .then(response => response.json())
+            .then(data => {
                 const fileList = document.getElementById('file-list');
-                links.forEach(link => {
+                data.files.forEach(file => {
                     const listItem = document.createElement('li');
                     const anchor = document.createElement('a');
-                    anchor.href = '/docs/' + link.getAttribute('href');
-                    anchor.textContent = link.textContent;
+                    anchor.href = '/docs/' + file;
+                    anchor.textContent = file;
                     listItem.appendChild(anchor);
                     fileList.appendChild(listItem);
                 });
