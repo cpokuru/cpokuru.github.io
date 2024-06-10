@@ -1,6 +1,10 @@
 {
-    "files": [
-        "info.txt",
-        "linux-logo.png"
-    ]
+  "docs": [
+    "info.txt",
+    "file3.jpg"
+  ],
+  "dacimages": [
+    "image1.jpg",
+    "image2.png"
+  ]
 }
