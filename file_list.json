@@ -6,6 +6,7 @@
   "dacimages": [
     "help.txt",
     "busybox.tar",
-    "dacm.tar"
+    "dacm.tar",
+    "testapp32.tar"
   ]
 }
