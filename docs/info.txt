@@ -1,1 +1,6 @@
-Test page for github.io
+kirkstone 32 bit :
+  "testapp32.tar"
+
+dunfell 32 bit :
+  "busybox.tar",
+  "dacm.tar"
